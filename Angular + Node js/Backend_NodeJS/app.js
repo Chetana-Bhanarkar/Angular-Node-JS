@@ -10,6 +10,9 @@ app.use(cors({
 }));
 
 
+
+
+
 axios.get('https://data.covid19india.org/v4/min/data.min.json').then(resp => {
     data = resp.data;
 });
