@@ -1,0 +1,95 @@
+<div mat-dialog-title>Add Employee Details</div>
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="Eg : John" type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Eg : Doe" type="text">
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Eg : Doejohn@gmail.com" type="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-radio-group aria-label="Select an option">
+            <mat-label>Gender</mat-label>
+            <mat-radio-button value="1">Male</mat-radio-button>
+            <mat-radio-button value="2">Female</mat-radio-button>
+            <mat-radio-button value="2">Other</mat-radio-button>
+          </mat-radio-group>
+    </div>
+
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let item of education" [value]="item">{{item}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+
+    <div mat-dialog-actions>
+        <button mat-raised-button>Cancel</button>
+        <button mat-raised-button color="accent">Save</button>
+    </div>
+    
+</div>
+
+
+
+
+
+<!-- <div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="Eg : John" type="text">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Eg : Doe" type="text">
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Eg : Doejohn@gmail.com" type="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-label>Gender</mat-label>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Male</mat-radio-button>
+            <mat-radio-button value="2">Female</mat-radio-button>
+            <mat-radio-button value="2">Other</mat-radio-button>
+          </mat-radio-group>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button>Cancel</button>
+    <button mat-raised-button color="accent">Save</button>
+</div> -->
