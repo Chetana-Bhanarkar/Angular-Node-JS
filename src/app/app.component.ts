@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EmpAddEditComponent } from './pages/emp-add-edit/emp-add-edit.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Employee_details';
+  title = 'Employees-detail';
+
+  constructor(private _dailog : MatDialog){}
+
+  getbox(){
+    this._dailog.open(EmpAddEditComponent)
+  }
+
+
 }
